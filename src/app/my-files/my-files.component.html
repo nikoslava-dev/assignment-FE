@@ -1,0 +1,3 @@
+<ul class="files-container" *ngIf="files && files.length > 0">
+    <li *ngFor="let file of files" (click)="selectedFileChanged(file.name)" [ngClass]="{ 'selected': selectedFileName === file.name}">{{file.name}}</li>
+</ul>

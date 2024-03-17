@@ -1,0 +1,13 @@
+<div class="main-container">
+  <ng-container *ngIf="files$ | async as files">
+    <my-files [files]="files" (fileChanged)="onFileChanged($event)"></my-files>
+  </ng-container>
+  
+  <ng-container *ngIf="tables$ | async as tables">
+    <my-tables [tables]="tables" (tableChanged)="onTableChanged($event)"></my-tables>
+  </ng-container>
+  
+  <ng-container *ngIf="selectedTable">
+    <my-table [selectedTable]="selectedTable"></my-table>
+  </ng-container>
+</div>
